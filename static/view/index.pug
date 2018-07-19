@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    title Social Share Demo
+    include includes/meta.pug
+
+    //- webpack share style
+    each _style,index in htmlWebpackPlugin.files.css
+      if index === 0
+        link(href=_style, rel="stylesheet")
+
+    //- webpack style
+    each _style,index in htmlWebpackPlugin.files.css
+      if index !== 0
+        link(href=_style, rel="stylesheet")
+
+  body
+    .box
+      #social-share
+
+    //- webpack share js
+    each _js in htmlWebpackPlugin.files.js
+      script(src=_js)
+
+
+
+
+
