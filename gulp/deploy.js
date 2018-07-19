@@ -4,7 +4,7 @@ const
 ;
 
 // Deploy to ghPages
-gulp.task('deploy', () => ghPages.publish(srcPaths.build, {
+gulp.task('deploy', () => ghPages.publish('build', {
   src: ['**/*']
 }, (err) => {
   console.error(err);
