@@ -1,27 +1,35 @@
-@font-face {
-  font-family: "socialshare";
-  src: url('~social-share.js/src/fonts/iconfont.eot'); /* IE9*/
-  src: url('~social-share.js/src/fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('~social-share.js/src/fonts/iconfont.woff') format('woff'), /* chrome, firefox */
-  url('~social-share.js/src/fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('~social-share.js/src/fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
-
 .social-share {
-  font-family: "socialshare" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-  * {
-    font-family: "socialshare" !important;
+  .icon-weibo {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 20px;
+      background: url("../../static/images/weibo_0.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../../static/images/weibo_1.png");
+      }
+    }
   }
-  .icon-weibo:before {
-    content: "\f12a";
-  }
-  .icon-wechat:before {
-    content: "\f09a";
+  .icon-wechat {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 20px;
+      background: url("../../static/images/weixin_0.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../../static/images/weixin_1.png");
+      }
+    }
   }
 
   a {
@@ -40,18 +48,10 @@
   .social-share-icon {
     position: relative;
     display: inline-block;
-    width: 20px;
+    width: 25px;
     height: 20px;
-
-    font-size: 20px;
-    line-height: 20px;
-    color: #979797;
     text-align: center;
     vertical-align: middle;
-
-    &:hover {
-      color: #777;
-    }
   }
 
   .icon-wechat {

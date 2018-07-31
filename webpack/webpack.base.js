@@ -48,8 +48,6 @@ module.exports = {
       {
         test: /\.js$/,
         type: 'javascript/auto',
-        include: path.resolve('app'),
-        exclude: /node_modules/,
         loader: 'babel-loader',
       },
 
